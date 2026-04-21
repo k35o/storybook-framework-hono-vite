@@ -1,6 +1,6 @@
 {
   "name": "storybook-framework-hono-vite",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Storybook framework for Hono JSX with the Vite builder",
   "keywords": [
     "hono",
@@ -11,9 +11,19 @@
   ],
   "license": "MIT",
   "author": "k8o",
+  "homepage": "https://github.com/k35o/storybook-framework-hono-vite#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k35o/storybook-framework-hono-vite.git",
+    "directory": "packages/storybook-framework-hono-vite"
+  },
+  "bugs": {
+    "url": "https://github.com/k35o/storybook-framework-hono-vite/issues"
+  },
   "files": [
     "dist/**/*",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "type": "module",
   "exports": {
@@ -38,11 +48,11 @@
     "./package.json": "./package.json"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "scripts": {
     "build": "vp pack",
-    "prepare": "vp pack",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "check": "vp check",
@@ -71,11 +81,7 @@
       "optional": true
     }
   },
-  "overrides": {
-    "storybook": "$storybook"
-  },
   "engines": {
     "node": ">=22.0.0"
-  },
-  "packageManager": "pnpm@10.24.0"
+  }
 }
