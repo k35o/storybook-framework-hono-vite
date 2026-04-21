@@ -8,9 +8,11 @@
     "test": "pnpm --filter example-basic test",
     "typecheck": "pnpm -r typecheck",
     "check": "pnpm -r check",
-    "storybook": "pnpm build && pnpm --filter example-basic storybook"
+    "storybook": "pnpm build && pnpm --filter example-basic storybook",
+    "release": "pnpm build && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "2.29.8",
     "storybook-framework-hono-vite": "workspace:*",
     "vite-plus": "catalog:"
   },
