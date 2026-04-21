@@ -1,0 +1,33 @@
+{
+  "name": "example-basic",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prestorybook": "pnpm --filter storybook-framework-hono-vite build",
+    "storybook": "storybook dev -p 6006 --no-open",
+    "prebuild-storybook": "pnpm --filter storybook-framework-hono-vite build",
+    "build-storybook": "storybook build",
+    "pretest": "pnpm --filter storybook-framework-hono-vite build",
+    "test": "vitest run --project=storybook",
+    "test:ui": "vitest --ui --project=storybook",
+    "pretypecheck": "pnpm --filter storybook-framework-hono-vite build",
+    "typecheck": "tsc --noEmit",
+    "check": "vp check",
+    "check:write": "vp check --fix"
+  },
+  "dependencies": {
+    "hono": "catalog:",
+    "storybook-framework-hono-vite": "workspace:*"
+  },
+  "devDependencies": {
+    "@storybook/addon-vitest": "catalog:",
+    "@types/node": "catalog:",
+    "@vitest/browser-playwright": "catalog:",
+    "playwright": "catalog:",
+    "storybook": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plus": "catalog:",
+    "vitest": "catalog:"
+  }
+}

@@ -1,0 +1,5 @@
+node_modules
+dist
+.turbo
+storybook-static
+.pnpm-store

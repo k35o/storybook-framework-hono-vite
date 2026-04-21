@@ -1,0 +1,34 @@
+packages:
+  - packages/*
+  - examples/*
+
+catalog:
+  '@storybook/builder-vite': 10.3.5
+  '@storybook/addon-vitest': 10.3.5
+  '@types/node': 25.6.0
+  '@vitest/browser-playwright': 4.1.4
+  hono: 4.12.14
+  playwright: 1.59.1
+  storybook: 10.3.5
+  typescript: 6.0.3
+  vite: 8.0.9
+  vite-plus: 0.1.16
+  vitest: 4.1.4
+
+blockExoticSubdeps: true
+
+allowBuilds:
+  '@swc/core': false
+  esbuild: false
+
+minimumReleaseAge: 4320
+minimumReleaseAgeExclude:
+  - '@storybook/addon-vitest'
+  - '@storybook/builder-vite'
+  - '@types/node'
+  - hono
+  - storybook
+  - typescript
+  - vite
+
+verifyDepsBeforeRun: install
