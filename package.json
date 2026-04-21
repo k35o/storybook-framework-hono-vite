@@ -5,7 +5,7 @@
   "scripts": {
     "build": "pnpm --filter storybook-framework-hono-vite build",
     "build-storybook": "pnpm build && pnpm --filter example-basic build-storybook",
-    "test": "pnpm --filter example-basic test",
+    "test": "pnpm --filter storybook-framework-hono-vite test && pnpm --filter example-basic test",
     "typecheck": "pnpm -r typecheck",
     "check": "pnpm -r check",
     "storybook": "pnpm build && pnpm --filter example-basic storybook",
