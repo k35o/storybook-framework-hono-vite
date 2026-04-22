@@ -40,6 +40,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build packages
+        run: pnpm build
+
       - name: Install Playwright browser
         if: matrix.task == 'test'
         run: pnpm --filter example-basic exec playwright install --with-deps chromium

@@ -1,10 +1,10 @@
-import { defineMain } from 'storybook-framework-hono-vite/node';
+import type { StorybookConfig } from 'storybook-framework-hono-vite';
 
-export default defineMain({
+export default {
   addons: ['@storybook/addon-vitest'],
   framework: {
     name: 'storybook-framework-hono-vite',
     options: {},
   },
-  stories: ['../src/**/*.stories.@(ts|tsx)'],
-});
+  stories: ['../app/**/*.stories.@(ts|tsx)'],
+} satisfies StorybookConfig;
