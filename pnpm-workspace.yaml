@@ -14,7 +14,7 @@ catalog:
   storybook: 10.3.5
   typescript: 6.0.3
   vite: 8.0.8
-  vite-plus: 0.1.16
+  vite-plus: 0.1.17
   vitest: 4.1.4
 
 blockExoticSubdeps: true
