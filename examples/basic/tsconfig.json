@@ -14,5 +14,5 @@
     "target": "esnext",
     "types": ["node"]
   },
-  "include": [".storybook/**/*.ts", "app/**/*.ts", "app/**/*.tsx"]
+  "include": [".storybook/**/*.ts", ".storybook/**/*.tsx", "app/**/*.ts", "app/**/*.tsx"]
 }

@@ -1,4 +1,4 @@
-import type { Child } from 'hono/jsx';
+import type { JSX as HonoJSX } from 'hono/jsx/jsx-dev-runtime';
 import type {
   AnnotatedStoryFn,
   Args,
@@ -62,10 +62,12 @@ type ComponentProps<TComponent> = TComponent extends (...args: infer TArgs) => u
     : Record<string, never>
   : never;
 
+export type HonoStoryResult = HonoJSX.Element | null;
+
 export interface HonoRenderer extends WebRenderer {
   component: AnyComponent;
-  storyResult: Child;
-  mount: (ui?: Child) => Promise<Canvas>;
+  storyResult: HonoStoryResult;
+  mount: (ui?: HonoStoryResult) => Promise<Canvas>;
 }
 
 export interface HonoParameters {
