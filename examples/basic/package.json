@@ -18,6 +18,7 @@
     "storybook-framework-hono-vite": "workspace:*"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "catalog:",
     "@storybook/addon-vitest": "catalog:",
     "@types/node": "catalog:",
     "@vitest/browser-playwright": "catalog:",

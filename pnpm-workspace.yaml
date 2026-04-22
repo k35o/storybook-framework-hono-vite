@@ -3,6 +3,7 @@ packages:
   - examples/*
 
 catalog:
+  '@storybook/addon-a11y': 10.3.5
   '@storybook/addon-vitest': 10.3.5
   '@storybook/builder-vite': 10.3.5
   '@types/node': 25.6.0
