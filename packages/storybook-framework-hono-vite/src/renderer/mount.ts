@@ -1,8 +1,7 @@
-import type { Child } from 'hono/jsx';
 import type { StoryContext as StoryContextBase } from 'storybook/internal/types';
-import type { HonoRenderer } from './index.js';
+import type { HonoRenderer, HonoStoryResult } from './index.js';
 
-export const mount = (context: StoryContextBase<HonoRenderer>) => async (ui?: Child) => {
+export const mount = (context: StoryContextBase<HonoRenderer>) => async (ui?: HonoStoryResult) => {
   if (ui !== undefined) {
     context.originalStoryFn = () => ui;
   }

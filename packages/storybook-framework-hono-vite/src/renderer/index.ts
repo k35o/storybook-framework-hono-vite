@@ -1,4 +1,4 @@
-import type { Child } from 'hono/jsx';
+import type { JSX as HonoJSX } from 'hono/jsx/jsx-dev-runtime';
 import type {
   AnnotatedStoryFn,
   Args,
@@ -20,7 +20,7 @@ import type {
   StrictArgs,
   WebRenderer,
 } from 'storybook/internal/types';
-export type { Args, Parameters, StrictArgs } from 'storybook/internal/types';
+export type { Args, ArgTypes, Parameters, StrictArgs } from 'storybook/internal/types';
 import {
   composeConfigs,
   composeStories as originalComposeStories,
@@ -62,10 +62,12 @@ type ComponentProps<TComponent> = TComponent extends (...args: infer TArgs) => u
     : Record<string, never>
   : never;
 
+export type HonoStoryResult = HonoJSX.Element | null;
+
 export interface HonoRenderer extends WebRenderer {
   component: AnyComponent;
-  storyResult: Child;
-  mount: (ui?: Child) => Promise<Canvas>;
+  storyResult: HonoStoryResult;
+  mount: (ui?: HonoStoryResult) => Promise<Canvas>;
 }
 
 export interface HonoParameters {
@@ -97,11 +99,24 @@ export type StoryObj<TMetaOrCmpOrArgs = Args> = [TMetaOrCmpOrArgs] extends [
       (Component extends AnyComponent ? ComponentProps<Component> : unknown) &
         ArgsFromMeta<HonoRenderer, TMetaOrCmpOrArgs>
     > extends infer TArgs
-    ? StoryAnnotations<HonoRenderer, TArgs, SetOptional<TArgs, keyof TArgs & keyof DefaultArgs>>
+    ? StoryAnnotations<
+        HonoRenderer,
+        AddMocks<TArgs, DefaultArgs>,
+        SetOptional<TArgs, keyof TArgs & keyof DefaultArgs>
+      >
     : never
   : TMetaOrCmpOrArgs extends AnyComponent
     ? StoryAnnotations<HonoRenderer, ComponentProps<TMetaOrCmpOrArgs>>
     : StoryAnnotations<HonoRenderer, TMetaOrCmpOrArgs>;
+
+// Downcast to function types that are mocks, when a mock fn is given to meta args.
+export type AddMocks<TArgs, DefaultArgs> = Simplify<{
+  [T in keyof TArgs]: T extends keyof DefaultArgs
+    ? DefaultArgs[T] extends ((...args: unknown[]) => unknown) & { mock: {} }
+      ? DefaultArgs[T]
+      : TArgs[T]
+    : TArgs[T];
+}>;
 
 export type Decorator<TArgs = StrictArgs> = DecoratorFunction<HonoRenderer, TArgs>;
 export type Loader<TArgs = StrictArgs> = LoaderFunction<HonoRenderer, TArgs>;

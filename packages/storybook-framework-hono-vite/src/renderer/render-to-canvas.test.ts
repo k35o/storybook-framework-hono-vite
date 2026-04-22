@@ -170,6 +170,27 @@ describe('renderToCanvas', () => {
     await cleanup();
   });
 
+  it('keys the ErrorBoundary on storyContext.id so it resets between stories', async () => {
+    const root = createRootHandle();
+    createRoot.mockReturnValue(root);
+
+    const { renderToCanvas } = await import('./render-to-canvas.js');
+
+    await renderToCanvas(
+      {
+        forceRemount: false,
+        showException: vi.fn(),
+        showMain: vi.fn(),
+        storyContext: { id: 'story--one', parameters: {} },
+        unboundStoryFn: () => 'story',
+      } as never,
+      {} as HTMLElement,
+    );
+
+    const [, props] = createElement.mock.calls.at(-1) ?? [];
+    expect(props).toMatchObject({ key: 'story--one' });
+  });
+
   it('unmounts the root during cleanup', async () => {
     const root = createRootHandle();
     createRoot.mockReturnValue(root);

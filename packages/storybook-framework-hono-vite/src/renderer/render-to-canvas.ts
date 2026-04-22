@@ -51,6 +51,7 @@ export const renderToCanvas: RenderToCanvas<HonoRenderer> = async (
       createElement(
         ErrorBoundary as unknown as (props: Record<string, unknown>) => JSXNode,
         {
+          key: storyContext.id,
           fallback: null,
           onError: (error: unknown) => {
             showException(toError(error));
