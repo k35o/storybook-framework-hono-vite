@@ -14,7 +14,7 @@ app/
     _renderer.tsx     # HTML shell (jsx-renderer + HasIslands)
     index.tsx         # SSR page
   islands/
-    TodoList.tsx      # interactive island (useState)
+    todo-list.tsx     # interactive island (useState)
   components/         # shared server + story components
   lib/                # sample data and theme tokens
 ```
@@ -26,7 +26,7 @@ Stories live next to their components (`app/components/*.stories.tsx`,
 ## Run the Hono app
 
 ```bash
-pnpm app:dev
+pnpm dev
 ```
 
 HonoX serves the SSR page and hydrates `app/islands/*.tsx` on the client.
@@ -36,5 +36,5 @@ HonoX serves the SSR page and hydrates `app/islands/*.tsx` on the client.
 ```bash
 pnpm storybook          # dev
 pnpm build-storybook    # static build
-pnpm test               # vitest + Storybook browser tests
+pnpm test               # vitest + Storybook browser tests (a11y checks included)
 ```
