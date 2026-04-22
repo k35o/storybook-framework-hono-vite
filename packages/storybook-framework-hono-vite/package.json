@@ -9,16 +9,16 @@
     "storybook-framework",
     "vite"
   ],
+  "homepage": "https://github.com/k35o/storybook-framework-hono-vite#readme",
+  "bugs": {
+    "url": "https://github.com/k35o/storybook-framework-hono-vite/issues"
+  },
   "license": "MIT",
   "author": "k8o",
-  "homepage": "https://github.com/k35o/storybook-framework-hono-vite#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/k35o/storybook-framework-hono-vite.git",
     "directory": "packages/storybook-framework-hono-vite"
-  },
-  "bugs": {
-    "url": "https://github.com/k35o/storybook-framework-hono-vite/issues"
   },
   "files": [
     "dist/**/*",
