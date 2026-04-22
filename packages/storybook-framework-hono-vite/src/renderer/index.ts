@@ -112,7 +112,7 @@ export type StoryObj<TMetaOrCmpOrArgs = Args> = [TMetaOrCmpOrArgs] extends [
 // Downcast to function types that are mocks, when a mock fn is given to meta args.
 export type AddMocks<TArgs, DefaultArgs> = Simplify<{
   [T in keyof TArgs]: T extends keyof DefaultArgs
-    ? DefaultArgs[T] extends (...args: any) => any & { mock: {} }
+    ? DefaultArgs[T] extends ((...args: unknown[]) => unknown) & { mock: {} }
       ? DefaultArgs[T]
       : TArgs[T]
     : TArgs[T];
