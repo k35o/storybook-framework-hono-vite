@@ -22,8 +22,8 @@ catalogs:
       specifier: 4.1.4
       version: 4.1.4
     hono:
-      specifier: 4.12.18
-      version: 4.12.18
+      specifier: 4.12.21
+      version: 4.12.21
     honox:
       specifier: 0.1.55
       version: 0.1.55
@@ -67,10 +67,10 @@ importers:
     dependencies:
       hono:
         specifier: 'catalog:'
-        version: 4.12.18
+        version: 4.12.21
       honox:
         specifier: 'catalog:'
-        version: 0.1.55(hono@4.12.18)
+        version: 0.1.55(hono@4.12.21)
       storybook-framework-hono-vite:
         specifier: workspace:*
         version: link:../../packages/storybook-framework-hono-vite
@@ -117,7 +117,7 @@ importers:
         version: 25.6.0
       hono:
         specifier: 'catalog:'
-        version: 4.12.18
+        version: 4.12.21
       storybook:
         specifier: 'catalog:'
         version: 10.3.5(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
@@ -1668,8 +1668,8 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
-  hono@4.12.18:
-    resolution: {integrity: sha512-RWzP96k/yv0PQfyXnWjs6zot20TqfpfsNXhOnev8d1InAxubW93L11/oNUc3tQqn2G0bSdAOBpX+2uDFHV7kdQ==}
+  hono@4.12.21:
+    resolution: {integrity: sha512-uV63apnb0kyPtAUwoWgaGh9HyIFcv8lgmzPZSiTBQAFOFGIzka5EZ1dZocmGnn0XdX0+XTqJ6Tqv7selMuGLRQ==}
     engines: {node: '>=16.9.0'}
 
   honox@0.1.55:
@@ -2702,14 +2702,14 @@ snapshots:
   '@esbuild/win32-x64@0.27.7':
     optional: true
 
-  '@hono/node-server@1.19.14(hono@4.12.18)':
+  '@hono/node-server@1.19.14(hono@4.12.21)':
     dependencies:
-      hono: 4.12.18
+      hono: 4.12.21
 
-  '@hono/vite-dev-server@0.25.1(hono@4.12.18)':
+  '@hono/vite-dev-server@0.25.1(hono@4.12.21)':
     dependencies:
-      '@hono/node-server': 1.19.14(hono@4.12.18)
-      hono: 4.12.18
+      '@hono/node-server': 1.19.14(hono@4.12.21)
+      hono: 4.12.21
       minimatch: 9.0.9
 
   '@inquirer/external-editor@1.0.3(@types/node@25.6.0)':
@@ -3679,16 +3679,16 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  hono@4.12.18: {}
+  hono@4.12.21: {}
 
-  honox@0.1.55(hono@4.12.18):
+  honox@0.1.55(hono@4.12.21):
     dependencies:
       '@babel/generator': 7.25.6
       '@babel/parser': 7.25.6
       '@babel/traverse': 7.25.6
       '@babel/types': 7.25.6
-      '@hono/vite-dev-server': 0.25.1(hono@4.12.18)
-      hono: 4.12.18
+      '@hono/vite-dev-server': 0.25.1(hono@4.12.21)
+      hono: 4.12.21
       jsonc-parser: 3.3.1
       precinct: 12.2.0
     optionalDependencies:
