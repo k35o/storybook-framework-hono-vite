@@ -51,7 +51,7 @@ importers:
   .:
     devDependencies:
       '@changesets/changelog-github':
-        specifier: ^0.6.0
+        specifier: 0.6.0
         version: 0.6.0
       '@changesets/cli':
         specifier: 2.29.8
