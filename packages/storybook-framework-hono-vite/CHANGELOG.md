@@ -1,5 +1,13 @@
 # storybook-framework-hono-vite
 
+## 0.2.1
+
+### Patch Changes
+
+- [#29](https://github.com/k35o/storybook-framework-hono-vite/pull/29) [`ed487e2`](https://github.com/k35o/storybook-framework-hono-vite/commit/ed487e2f9c1516952ac10d80fe7969d3eae6422c) Thanks [@k35o](https://github.com/k35o)! - Add `storybook.displayName` metadata to package.json so the package shows a friendly name ("Hono (Vite)") in the Storybook integration catalog.
+
+- [#31](https://github.com/k35o/storybook-framework-hono-vite/pull/31) [`d1f56f7`](https://github.com/k35o/storybook-framework-hono-vite/commit/d1f56f7df445e58471ed3104d12cab9a7bb40117) Thanks [@k35o](https://github.com/k35o)! - Prefer Vite 8's `transformWithOxc` for the Hono JSX transform, falling back to `transformWithEsbuild` on Vite 5/6/7. This removes the `transformWithEsbuild` deprecation warning emitted on every transform under Vite 8 while keeping the existing `vite` peer dependency range (`^5 || ^6 || ^7 || ^8`).
+
 ## 0.2.0
 
 ### Minor Changes
