@@ -1,25 +1,32 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
-const transformWithEsbuild = vi.fn();
-
 type HonoJsxPlugin = {
   name: string;
   transform: (code: string, id: string) => Promise<unknown>;
 };
 
-vi.mock('vite', () => ({
-  transformWithEsbuild,
-}));
-
 afterEach(() => {
-  transformWithEsbuild.mockReset();
   vi.resetModules();
+  vi.clearAllMocks();
 });
+
+const importPreset = async (viteMock: Record<string, unknown>) => {
+  vi.doMock('vite', () => viteMock);
+
+  const { viteFinal } = await import('./preset.js');
+  const applyViteFinal = viteFinal!;
+  const config = await applyViteFinal({} as never, {} as never);
+  const plugin = config.plugins?.[0] as HonoJsxPlugin;
+
+  return { applyViteFinal, plugin };
+};
 
 describe('viteFinal', () => {
   it('merges the required Hono optimizeDeps entries', async () => {
-    const { viteFinal } = await import('./preset.js');
-    const applyViteFinal = viteFinal!;
+    const { applyViteFinal } = await importPreset({
+      transformWithEsbuild: vi.fn(),
+      transformWithOxc: vi.fn(),
+    });
 
     const config = await applyViteFinal(
       {
@@ -40,8 +47,10 @@ describe('viteFinal', () => {
   });
 
   it('prepends the Hono JSX plugin ahead of existing plugins', async () => {
-    const { viteFinal } = await import('./preset.js');
-    const applyViteFinal = viteFinal!;
+    const { applyViteFinal } = await importPreset({
+      transformWithEsbuild: vi.fn(),
+      transformWithOxc: vi.fn(),
+    });
 
     const config = await applyViteFinal(
       {
@@ -56,15 +65,39 @@ describe('viteFinal', () => {
     expect(plugin.name).toBe('storybook-framework-hono-vite:hono-jsx');
     expect(config.plugins?.[1]).toEqual({ name: 'existing-plugin' });
   });
+});
 
-  it('transforms local TSX files with the Hono JSX runtime settings', async () => {
+describe('honoJsxPlugin transform', () => {
+  it('prefers transformWithOxc with the Hono JSX runtime settings on Vite 8', async () => {
     const transformed = { code: 'compiled', map: null };
-    transformWithEsbuild.mockResolvedValue(transformed);
+    const transformWithOxc = vi.fn().mockResolvedValue(transformed);
+    const transformWithEsbuild = vi.fn();
 
-    const { viteFinal } = await import('./preset.js');
-    const applyViteFinal = viteFinal!;
-    const config = await applyViteFinal({} as never, {} as never);
-    const plugin = config.plugins?.[0] as HonoJsxPlugin;
+    const { plugin } = await importPreset({ transformWithEsbuild, transformWithOxc });
+
+    const result = await plugin.transform('const view = <div />;', '/tmp/view.tsx?story');
+
+    expect(result).toBe(transformed);
+    expect(transformWithEsbuild).not.toHaveBeenCalled();
+    expect(transformWithOxc).toHaveBeenCalledWith('const view = <div />;', '/tmp/view.tsx', {
+      lang: 'tsx',
+      sourceType: 'module',
+      jsx: {
+        runtime: 'automatic',
+        importSource: 'hono/jsx/dom',
+      },
+      sourcemap: true,
+      target: 'esnext',
+    });
+  });
+
+  it('falls back to transformWithEsbuild when transformWithOxc is unavailable (Vite 5/6/7)', async () => {
+    const transformed = { code: 'compiled', map: null };
+    const transformWithEsbuild = vi.fn().mockResolvedValue(transformed);
+
+    // Vite 5/6/7 do not export `transformWithOxc`; on a real ESM namespace the
+    // missing member reads as `undefined`, which is what `undefined` models here.
+    const { plugin } = await importPreset({ transformWithEsbuild, transformWithOxc: undefined });
 
     const result = await plugin.transform('const view = <div />;', '/tmp/view.tsx?story');
 
@@ -84,43 +117,39 @@ describe('viteFinal', () => {
     });
   });
 
-  it('ignores files from node_modules', async () => {
-    const { viteFinal } = await import('./preset.js');
-    const applyViteFinal = viteFinal!;
-    const config = await applyViteFinal({} as never, {} as never);
-    const plugin = config.plugins?.[0] as HonoJsxPlugin;
-
-    await expect(
-      plugin.transform('const view = <div />;', '/tmp/node_modules/pkg/view.tsx'),
-    ).resolves.toBeNull();
-    expect(transformWithEsbuild).not.toHaveBeenCalled();
-  });
-
-  it('uses the JSX loader for .jsx sources', async () => {
+  it('uses the jsx lang for .jsx sources', async () => {
     const transformed = { code: 'compiled-jsx', map: null };
-    transformWithEsbuild.mockResolvedValue(transformed);
+    const transformWithOxc = vi.fn().mockResolvedValue(transformed);
+    const transformWithEsbuild = vi.fn();
 
-    const { viteFinal } = await import('./preset.js');
-    const applyViteFinal = viteFinal!;
-    const config = await applyViteFinal({} as never, {} as never);
-    const plugin = config.plugins?.[0] as HonoJsxPlugin;
+    const { plugin } = await importPreset({ transformWithEsbuild, transformWithOxc });
 
     const result = await plugin.transform('const view = <div />;', '/tmp/view.jsx');
 
     expect(result).toBe(transformed);
-    expect(transformWithEsbuild).toHaveBeenCalledTimes(1);
-    expect(transformWithEsbuild).toHaveBeenCalledWith('const view = <div />;', '/tmp/view.jsx', {
-      jsx: 'automatic',
-      jsxImportSource: 'hono/jsx/dom',
-      loader: 'jsx',
+    expect(transformWithOxc).toHaveBeenCalledTimes(1);
+    expect(transformWithOxc).toHaveBeenCalledWith('const view = <div />;', '/tmp/view.jsx', {
+      lang: 'jsx',
+      sourceType: 'module',
+      jsx: {
+        runtime: 'automatic',
+        importSource: 'hono/jsx/dom',
+      },
       sourcemap: true,
       target: 'esnext',
-      tsconfigRaw: {
-        compilerOptions: {
-          jsx: 'react-jsx',
-          jsxImportSource: 'hono/jsx/dom',
-        },
-      },
     });
+  });
+
+  it('ignores files from node_modules', async () => {
+    const transformWithOxc = vi.fn();
+    const transformWithEsbuild = vi.fn();
+
+    const { plugin } = await importPreset({ transformWithEsbuild, transformWithOxc });
+
+    await expect(
+      plugin.transform('const view = <div />;', '/tmp/node_modules/pkg/view.tsx'),
+    ).resolves.toBeNull();
+    expect(transformWithOxc).not.toHaveBeenCalled();
+    expect(transformWithEsbuild).not.toHaveBeenCalled();
   });
 });
