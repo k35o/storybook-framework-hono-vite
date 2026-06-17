@@ -26,3 +26,6 @@ allowBuilds:
 minimumReleaseAge: 4320
 
 verifyDepsBeforeRun: install
+minimumReleaseAgeExclude:
+  # Renovate security update: hono@4.12.25
+  - hono@4.12.25
