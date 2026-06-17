@@ -8,7 +8,7 @@ catalog:
   '@storybook/builder-vite': 10.4.2
   '@types/node': 25.9.2
   '@vitest/browser-playwright': 4.1.8
-  hono: 4.12.23
+  hono: 4.12.25
   honox: 0.1.56
   playwright: 1.60.0
   storybook: 10.4.2
@@ -26,3 +26,6 @@ allowBuilds:
 minimumReleaseAge: 4320
 
 verifyDepsBeforeRun: install
+minimumReleaseAgeExclude:
+  # Renovate security update: hono@4.12.25
+  - hono@4.12.25
