@@ -22,8 +22,8 @@ catalogs:
       specifier: 4.1.8
       version: 4.1.8
     hono:
-      specifier: 4.12.23
-      version: 4.12.23
+      specifier: 4.12.25
+      version: 4.12.25
     honox:
       specifier: 0.1.56
       version: 0.1.56
@@ -67,10 +67,10 @@ importers:
     dependencies:
       hono:
         specifier: 'catalog:'
-        version: 4.12.23
+        version: 4.12.25
       honox:
         specifier: 'catalog:'
-        version: 0.1.56(hono@4.12.23)
+        version: 0.1.56(hono@4.12.25)
       storybook-framework-hono-vite:
         specifier: workspace:*
         version: link:../../packages/storybook-framework-hono-vite
@@ -117,7 +117,7 @@ importers:
         version: 25.9.2
       hono:
         specifier: 'catalog:'
-        version: 4.12.23
+        version: 4.12.25
       storybook:
         specifier: 'catalog:'
         version: 10.4.2(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(vite-plus@0.1.24(@types/node@25.9.2)(esbuild@0.27.7)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.2)(esbuild@0.27.7)))
@@ -1778,8 +1778,8 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
-  hono@4.12.23:
-    resolution: {integrity: sha512-eIaZ9qDgu7XV0pxOCrg7/WhnQ6Ivm22UcxhXx/A3dcbqbbYgBEkc6e/J/s7j2tS96zoB0S9VBdLwQNCWwUo4LA==}
+  hono@4.12.25:
+    resolution: {integrity: sha512-2NFaIyNVgJmBs/ecmtGzlmluTFs5cHEWGTdu0t1HBwYzoGXOL5nUQBRMXsXWla5i4KkG//QMzVP88m1+I3fdAQ==}
     engines: {node: '>=16.9.0'}
 
   honox@0.1.56:
@@ -2839,14 +2839,14 @@ snapshots:
   '@esbuild/win32-x64@0.27.7':
     optional: true
 
-  '@hono/node-server@1.19.14(hono@4.12.23)':
+  '@hono/node-server@1.19.14(hono@4.12.25)':
     dependencies:
-      hono: 4.12.23
+      hono: 4.12.25
 
-  '@hono/vite-dev-server@0.25.3(hono@4.12.23)':
+  '@hono/vite-dev-server@0.25.3(hono@4.12.25)':
     dependencies:
-      '@hono/node-server': 1.19.14(hono@4.12.23)
-      hono: 4.12.23
+      '@hono/node-server': 1.19.14(hono@4.12.25)
+      hono: 4.12.25
       minimatch: 9.0.9
 
   '@inquirer/external-editor@1.0.3(@types/node@25.9.2)':
@@ -3876,16 +3876,16 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  hono@4.12.23: {}
+  hono@4.12.25: {}
 
-  honox@0.1.56(hono@4.12.23):
+  honox@0.1.56(hono@4.12.25):
     dependencies:
       '@babel/generator': 7.29.1
       '@babel/parser': 7.29.3
       '@babel/traverse': 7.29.0
       '@babel/types': 7.29.0
-      '@hono/vite-dev-server': 0.25.3(hono@4.12.23)
-      hono: 4.12.23
+      '@hono/vite-dev-server': 0.25.3(hono@4.12.25)
+      hono: 4.12.25
       jsonc-parser: 3.3.1
       precinct: 12.2.0
     optionalDependencies:
