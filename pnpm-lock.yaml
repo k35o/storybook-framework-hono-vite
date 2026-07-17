@@ -22,8 +22,8 @@ catalogs:
       specifier: 4.1.10
       version: 4.1.10
     hono:
-      specifier: 4.12.28
-      version: 4.12.28
+      specifier: 4.12.29
+      version: 4.12.29
     honox:
       specifier: 0.1.58
       version: 0.1.58
@@ -61,16 +61,16 @@ importers:
         version: link:packages/storybook-framework-hono-vite
       vite-plus:
         specifier: 'catalog:'
-        version: 0.2.4(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10)(esbuild@0.28.1)(typescript@6.0.3)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))
+        version: 0.2.4(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10(playwright@1.61.1)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))(vitest@4.1.10))(esbuild@0.28.1)(typescript@6.0.3)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))
 
   examples/basic:
     dependencies:
       hono:
         specifier: 'catalog:'
-        version: 4.12.28
+        version: 4.12.29
       honox:
         specifier: 'catalog:'
-        version: 0.1.58(hono@4.12.28)
+        version: 0.1.58(hono@4.12.29)
       storybook-framework-hono-vite:
         specifier: workspace:*
         version: link:../../packages/storybook-framework-hono-vite
@@ -117,7 +117,7 @@ importers:
         version: 25.9.5
       hono:
         specifier: 'catalog:'
-        version: 4.12.28
+        version: 4.12.29
       storybook:
         specifier: 'catalog:'
         version: 10.4.6(@testing-library/dom@10.4.1)(prettier@2.8.8)(react@19.2.7)(vite-plus@0.2.4(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10)(esbuild@0.28.1)(typescript@6.0.3)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1)))
@@ -1745,8 +1745,8 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
-  hono@4.12.28:
-    resolution: {integrity: sha512-YwUvVpSF7m1yOblFPrU3Hbo8XhPheBoiyfGuII6z19LnOr6JpDnyyp7LFNrfV56wS8tpvtBFGRISHN02pDdLOA==}
+  hono@4.12.29:
+    resolution: {integrity: sha512-1hNiRjawYrLq/4m3DQQjPGFg0VZkk4RjQJDff/excI6Dm9BiL75qxGrd7/c6YOxPdq6AscP3LiXhQ6fKFC1Waw==}
     engines: {node: '>=16.9.0'}
 
   honox@0.1.58:
@@ -2807,14 +2807,14 @@ snapshots:
   '@esbuild/win32-x64@0.28.1':
     optional: true
 
-  '@hono/node-server@1.19.14(hono@4.12.28)':
+  '@hono/node-server@1.19.14(hono@4.12.29)':
     dependencies:
-      hono: 4.12.28
+      hono: 4.12.29
 
-  '@hono/vite-dev-server@0.25.3(hono@4.12.28)':
+  '@hono/vite-dev-server@0.25.3(hono@4.12.29)':
     dependencies:
-      '@hono/node-server': 1.19.14(hono@4.12.28)
-      hono: 4.12.28
+      '@hono/node-server': 1.19.14(hono@4.12.29)
+      hono: 4.12.29
       minimatch: 9.0.9
 
   '@inquirer/external-editor@1.0.3(@types/node@25.9.5)':
@@ -3812,16 +3812,16 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  hono@4.12.28: {}
+  hono@4.12.29: {}
 
-  honox@0.1.58(hono@4.12.28):
+  honox@0.1.58(hono@4.12.29):
     dependencies:
       '@babel/generator': 7.29.1
       '@babel/parser': 7.29.3
       '@babel/traverse': 7.29.0
       '@babel/types': 7.29.0
-      '@hono/vite-dev-server': 0.25.3(hono@4.12.28)
-      hono: 4.12.28
+      '@hono/vite-dev-server': 0.25.3(hono@4.12.29)
+      hono: 4.12.29
       jsonc-parser: 3.3.1
       precinct: 12.2.0
     optionalDependencies:
@@ -4051,6 +4051,31 @@ snapshots:
       '@oxc-resolver/binding-win32-arm64-msvc': 11.23.0
       '@oxc-resolver/binding-win32-x64-msvc': 11.23.0
 
+  oxfmt@0.57.0(vite-plus@0.2.4(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10(playwright@1.61.1)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))(vitest@4.1.10))(esbuild@0.28.1)(typescript@6.0.3)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))):
+    dependencies:
+      tinypool: 2.1.0
+    optionalDependencies:
+      '@oxfmt/binding-android-arm-eabi': 0.57.0
+      '@oxfmt/binding-android-arm64': 0.57.0
+      '@oxfmt/binding-darwin-arm64': 0.57.0
+      '@oxfmt/binding-darwin-x64': 0.57.0
+      '@oxfmt/binding-freebsd-x64': 0.57.0
+      '@oxfmt/binding-linux-arm-gnueabihf': 0.57.0
+      '@oxfmt/binding-linux-arm-musleabihf': 0.57.0
+      '@oxfmt/binding-linux-arm64-gnu': 0.57.0
+      '@oxfmt/binding-linux-arm64-musl': 0.57.0
+      '@oxfmt/binding-linux-ppc64-gnu': 0.57.0
+      '@oxfmt/binding-linux-riscv64-gnu': 0.57.0
+      '@oxfmt/binding-linux-riscv64-musl': 0.57.0
+      '@oxfmt/binding-linux-s390x-gnu': 0.57.0
+      '@oxfmt/binding-linux-x64-gnu': 0.57.0
+      '@oxfmt/binding-linux-x64-musl': 0.57.0
+      '@oxfmt/binding-openharmony-arm64': 0.57.0
+      '@oxfmt/binding-win32-arm64-msvc': 0.57.0
+      '@oxfmt/binding-win32-ia32-msvc': 0.57.0
+      '@oxfmt/binding-win32-x64-msvc': 0.57.0
+      vite-plus: 0.2.4(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10(playwright@1.61.1)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))(vitest@4.1.10))(esbuild@0.28.1)(typescript@6.0.3)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))
+
   oxfmt@0.57.0(vite-plus@0.2.4(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10)(esbuild@0.28.1)(typescript@6.0.3)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))):
     dependencies:
       tinypool: 2.1.0
@@ -4084,6 +4109,30 @@ snapshots:
       '@oxlint-tsgolint/linux-x64': 0.24.0
       '@oxlint-tsgolint/win32-arm64': 0.24.0
       '@oxlint-tsgolint/win32-x64': 0.24.0
+
+  oxlint@1.72.0(oxlint-tsgolint@0.24.0)(vite-plus@0.2.4(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10(playwright@1.61.1)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))(vitest@4.1.10))(esbuild@0.28.1)(typescript@6.0.3)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))):
+    optionalDependencies:
+      '@oxlint/binding-android-arm-eabi': 1.72.0
+      '@oxlint/binding-android-arm64': 1.72.0
+      '@oxlint/binding-darwin-arm64': 1.72.0
+      '@oxlint/binding-darwin-x64': 1.72.0
+      '@oxlint/binding-freebsd-x64': 1.72.0
+      '@oxlint/binding-linux-arm-gnueabihf': 1.72.0
+      '@oxlint/binding-linux-arm-musleabihf': 1.72.0
+      '@oxlint/binding-linux-arm64-gnu': 1.72.0
+      '@oxlint/binding-linux-arm64-musl': 1.72.0
+      '@oxlint/binding-linux-ppc64-gnu': 1.72.0
+      '@oxlint/binding-linux-riscv64-gnu': 1.72.0
+      '@oxlint/binding-linux-riscv64-musl': 1.72.0
+      '@oxlint/binding-linux-s390x-gnu': 1.72.0
+      '@oxlint/binding-linux-x64-gnu': 1.72.0
+      '@oxlint/binding-linux-x64-musl': 1.72.0
+      '@oxlint/binding-openharmony-arm64': 1.72.0
+      '@oxlint/binding-win32-arm64-msvc': 1.72.0
+      '@oxlint/binding-win32-ia32-msvc': 1.72.0
+      '@oxlint/binding-win32-x64-msvc': 1.72.0
+      oxlint-tsgolint: 0.24.0
+      vite-plus: 0.2.4(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10(playwright@1.61.1)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))(vitest@4.1.10))(esbuild@0.28.1)(typescript@6.0.3)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))
 
   oxlint@1.72.0(oxlint-tsgolint@0.24.0)(vite-plus@0.2.4(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10)(esbuild@0.28.1)(typescript@6.0.3)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))):
     optionalDependencies:
@@ -4387,6 +4436,65 @@ snapshots:
   use-sync-external-store@1.6.0(react@19.2.7):
     dependencies:
       react: 19.2.7
+
+  vite-plus@0.2.4(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10(playwright@1.61.1)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))(vitest@4.1.10))(esbuild@0.28.1)(typescript@6.0.3)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1)):
+    dependencies:
+      '@oxc-project/types': 0.138.0
+      '@oxlint/plugins': 1.68.0
+      '@vitest/browser': 4.1.10(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))(vitest@4.1.10)
+      '@vitest/browser-preview': 4.1.10(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))(vitest@4.1.10)
+      '@vitest/expect': 4.1.10
+      '@vitest/mocker': 4.1.10(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))
+      '@vitest/pretty-format': 4.1.10
+      '@vitest/runner': 4.1.10
+      '@vitest/snapshot': 4.1.10
+      '@vitest/spy': 4.1.10
+      '@vitest/utils': 4.1.10
+      '@voidzero-dev/vite-plus-core': 0.2.4(@types/node@25.9.5)(esbuild@0.28.1)(typescript@6.0.3)
+      oxfmt: 0.57.0(vite-plus@0.2.4(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10(playwright@1.61.1)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))(vitest@4.1.10))(esbuild@0.28.1)(typescript@6.0.3)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1)))
+      oxlint: 1.72.0(oxlint-tsgolint@0.24.0)(vite-plus@0.2.4(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10(playwright@1.61.1)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))(vitest@4.1.10))(esbuild@0.28.1)(typescript@6.0.3)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1)))
+      oxlint-tsgolint: 0.24.0
+      vitest: 4.1.10(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10)(@vitest/browser-preview@4.1.10)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))
+    optionalDependencies:
+      '@vitest/browser-playwright': 4.1.10(playwright@1.61.1)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1))(vitest@4.1.10)
+      '@voidzero-dev/vite-plus-darwin-arm64': 0.2.4
+      '@voidzero-dev/vite-plus-darwin-x64': 0.2.4
+      '@voidzero-dev/vite-plus-linux-arm64-gnu': 0.2.4
+      '@voidzero-dev/vite-plus-linux-arm64-musl': 0.2.4
+      '@voidzero-dev/vite-plus-linux-x64-gnu': 0.2.4
+      '@voidzero-dev/vite-plus-linux-x64-musl': 0.2.4
+      '@voidzero-dev/vite-plus-win32-arm64-msvc': 0.2.4
+      '@voidzero-dev/vite-plus-win32-x64-msvc': 0.2.4
+    transitivePeerDependencies:
+      - '@arethetypeswrong/core'
+      - '@edge-runtime/vm'
+      - '@opentelemetry/api'
+      - '@types/node'
+      - '@vitejs/devtools'
+      - '@vitest/coverage-istanbul'
+      - '@vitest/coverage-v8'
+      - '@vitest/ui'
+      - bufferutil
+      - esbuild
+      - happy-dom
+      - jiti
+      - jsdom
+      - less
+      - msw
+      - publint
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - svelte
+      - terser
+      - tsx
+      - typescript
+      - unplugin-unused
+      - unrun
+      - utf-8-validate
+      - vite
+      - yaml
 
   vite-plus@0.2.4(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10)(esbuild@0.28.1)(typescript@6.0.3)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.28.1)):
     dependencies:
