@@ -9,7 +9,7 @@ catalog:
   '@types/node': 25.9.5
   '@vitest/browser-playwright': 4.1.10
   hono: 4.12.29
-  honox: 0.1.58
+  honox: 0.1.59
   playwright: 1.61.1
   storybook: 10.5.0
   typescript: 6.0.3
