@@ -54,6 +54,5 @@ jobs:
         with:
           build: pnpm build
           github-token: ${{ steps.app-token.outputs.token }}
-          auto-merge: true
           commit-message: 'chore: version packages'
           pr-title: 'chore: version packages'
