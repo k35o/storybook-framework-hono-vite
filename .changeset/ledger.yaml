@@ -1,0 +1,4 @@
+storybook-framework-hono-vite@0.2.2:
+  dir: packages/storybook-framework-hono-vite
+  intents:
+    - switch-release-automation
