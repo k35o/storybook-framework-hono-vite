@@ -1,5 +1,11 @@
 # storybook-framework-hono-vite
 
+## 0.2.2
+
+### Patch Changes
+
+- Switch release automation from changesets/action to pnpm-release-action (pnpm built-in release management). No runtime changes.
+
 ## 0.2.1
 
 ### Patch Changes
