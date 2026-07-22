@@ -29,3 +29,7 @@ verifyDepsBeforeRun: install
 minimumReleaseAgeExclude:
   # Renovate security update: hono@4.12.25
   - hono@4.12.25
+
+versioning:
+  changelog:
+    storage: repository

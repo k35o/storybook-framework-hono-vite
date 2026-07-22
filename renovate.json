@@ -22,10 +22,6 @@
     {
       "matchPackageNames": ["/^node$/"],
       "groupName": "node dependencies"
-    },
-    {
-      "matchPackageNames": ["changesets/action"],
-      "enabled": false
     }
   ]
 }
