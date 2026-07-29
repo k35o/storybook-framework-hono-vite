@@ -50,7 +50,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Release
-        uses: k35o/pnpm-release-action@1430aa13b6d2709a6d18251cc90d1864ed9b61de # v0.2.0
+        uses: k35o/pnpm-release-action@5e009384bf5b1d2501f8405817b5d5578a90624e # v0.2.2
         with:
           build: pnpm build
           github-token: ${{ steps.app-token.outputs.token }}
