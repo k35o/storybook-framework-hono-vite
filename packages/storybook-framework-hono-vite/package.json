@@ -71,7 +71,7 @@
     "vitest": "catalog:"
   },
   "peerDependencies": {
-    "hono": "^4.12.25",
+    "hono": "^4.12.34",
     "storybook": "^10.3.5",
     "typescript": ">=5.9.0",
     "vite": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0"
