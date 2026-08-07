@@ -10,11 +10,11 @@ catalog:
   '@vitest/browser-playwright': 4.1.10
   hono: 4.12.34
   honox: 0.1.60
-  playwright: 1.62.0
+  playwright: 1.62.1
   storybook: 10.5.5
   typescript: 7.0.2
-  vite: 8.1.5
-  vite-plus: 0.2.6
+  vite: 8.2.0
+  vite-plus: 0.2.7
   vitest: 4.1.10
 
 blockExoticSubdeps: true
