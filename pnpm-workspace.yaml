@@ -3,15 +3,15 @@ packages:
   - examples/*
 
 catalog:
-  '@storybook/addon-a11y': 10.5.7
-  '@storybook/addon-vitest': 10.5.7
-  '@storybook/builder-vite': 10.5.7
+  '@storybook/addon-a11y': 10.5.8
+  '@storybook/addon-vitest': 10.5.8
+  '@storybook/builder-vite': 10.5.8
   '@types/node': 25.9.5
   '@vitest/browser-playwright': 4.1.10
   hono: 4.13.2
   honox: 0.1.60
   playwright: 1.62.1
-  storybook: 10.5.7
+  storybook: 10.5.8
   typescript: 7.0.2
   vite: 8.2.1
   vite-plus: 0.2.9
