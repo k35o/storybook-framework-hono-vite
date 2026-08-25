@@ -22,11 +22,11 @@ catalogs:
       specifier: 4.1.10
       version: 4.1.10
     hono:
-      specifier: 4.13.2
-      version: 4.13.2
+      specifier: 4.13.3
+      version: 4.13.3
     honox:
-      specifier: 0.1.60
-      version: 0.1.60
+      specifier: 0.1.61
+      version: 0.1.61
     playwright:
       specifier: 1.62.1
       version: 1.62.1
@@ -61,10 +61,10 @@ importers:
     dependencies:
       hono:
         specifier: 'catalog:'
-        version: 4.13.2
+        version: 4.13.3
       honox:
         specifier: 'catalog:'
-        version: 0.1.60(hono@4.13.2)
+        version: 0.1.61(hono@4.13.3)
       storybook-framework-hono-vite:
         specifier: workspace:*
         version: link:../../packages/storybook-framework-hono-vite
@@ -111,7 +111,7 @@ importers:
         version: 25.9.5
       hono:
         specifier: 'catalog:'
-        version: 4.13.2
+        version: 4.13.3
       storybook:
         specifier: 'catalog:'
         version: 10.5.8(react@19.2.8)(vite-plus@0.2.9(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10)(esbuild@0.28.2)(typescript@7.0.2)(vite@8.2.1(@types/node@25.9.5)(esbuild@0.28.2)))
@@ -1813,12 +1813,12 @@ packages:
     engines: {node: '>=0.6.0'}
     hasBin: true
 
-  hono@4.13.2:
-    resolution: {integrity: sha512-JydRilDRkYBQMt9qR9U92mXxmbGqsqSn/IKOrh4e7/gEbn+0zSr8igTu0obwJoNGN4sez28DIql7FBHWydoJpA==}
+  hono@4.13.3:
+    resolution: {integrity: sha512-r8AO2mYHoLxSHkgafNeC/BXyb2vWRxD3jem4Ts+ptav8oTG5FIRifAjuJEmZI4bSvvc2ns0GxmIYiZnHqN3mMw==}
     engines: {node: '>=16.9.0'}
 
-  honox@0.1.60:
-    resolution: {integrity: sha512-WeYf6S2UE8XYtLrSdI60edWyVkdrODgbNAapQgDnq377zv5vQ3psDwsEpzDHXMiT2J27/mMqqrESlubLFv5Bfw==}
+  honox@0.1.61:
+    resolution: {integrity: sha512-HMvVTyAIJYIWjHUvdowQvnMVA3I1HKeKD71TVCAKiTdUI+xU7cYRryMK+ASmnRb7lFV6Yak4/d1VqXjJnEYSvg==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '>=4.*'
@@ -2351,8 +2351,8 @@ snapshots:
 
   '@babel/generator@7.29.1':
     dependencies:
-      '@babel/parser': 7.29.3
-      '@babel/types': 7.29.0
+      '@babel/parser': 7.29.8
+      '@babel/types': 7.29.8
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
       jsesc: 3.1.0
@@ -2365,7 +2365,7 @@ snapshots:
 
   '@babel/parser@7.29.3':
     dependencies:
-      '@babel/types': 7.29.0
+      '@babel/types': 7.29.8
 
   '@babel/parser@7.29.8':
     dependencies:
@@ -2384,9 +2384,9 @@ snapshots:
       '@babel/code-frame': 7.29.7
       '@babel/generator': 7.29.1
       '@babel/helper-globals': 7.29.7
-      '@babel/parser': 7.29.3
+      '@babel/parser': 7.29.8
       '@babel/template': 7.29.7
-      '@babel/types': 7.29.0
+      '@babel/types': 7.29.8
       debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
@@ -2518,14 +2518,14 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@hono/node-server@1.19.17(hono@4.13.2)':
+  '@hono/node-server@1.19.17(hono@4.13.3)':
     dependencies:
-      hono: 4.13.2
+      hono: 4.13.3
 
-  '@hono/vite-dev-server@0.25.3(hono@4.13.2)':
+  '@hono/vite-dev-server@0.25.3(hono@4.13.3)':
     dependencies:
-      '@hono/node-server': 1.19.17(hono@4.13.2)
-      hono: 4.13.2
+      '@hono/node-server': 1.19.17(hono@4.13.3)
+      hono: 4.13.3
       minimatch: 9.0.9
 
   '@jridgewell/gen-mapping@0.3.13':
@@ -3531,16 +3531,16 @@ snapshots:
     dependencies:
       minimist: 1.2.8
 
-  hono@4.13.2: {}
+  hono@4.13.3: {}
 
-  honox@0.1.60(hono@4.13.2):
+  honox@0.1.61(hono@4.13.3):
     dependencies:
       '@babel/generator': 7.29.1
       '@babel/parser': 7.29.3
       '@babel/traverse': 7.29.0
       '@babel/types': 7.29.0
-      '@hono/vite-dev-server': 0.25.3(hono@4.13.2)
-      hono: 4.13.2
+      '@hono/vite-dev-server': 0.25.3(hono@4.13.3)
+      hono: 4.13.3
       jsonc-parser: 3.3.1
       precinct: 12.2.0
     optionalDependencies:
@@ -3654,7 +3654,7 @@ snapshots:
 
   node-source-walk@7.0.2:
     dependencies:
-      '@babel/parser': 7.29.3
+      '@babel/parser': 7.29.8
 
   obug@2.1.4: {}
 
