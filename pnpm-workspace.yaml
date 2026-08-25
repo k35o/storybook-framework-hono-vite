@@ -7,7 +7,7 @@ catalog:
   '@storybook/addon-vitest': 10.5.9
   '@storybook/builder-vite': 10.5.9
   '@types/node': 25.9.5
-  '@vitest/browser-playwright': 4.1.10
+  '@vitest/browser-playwright': 4.1.11
   hono: 4.13.3
   honox: 0.1.61
   playwright: 1.62.1
@@ -15,7 +15,7 @@ catalog:
   typescript: 7.0.2
   vite: 8.2.1
   vite-plus: 0.2.9
-  vitest: 4.1.10
+  vitest: 4.1.11
 
 blockExoticSubdeps: true
 
