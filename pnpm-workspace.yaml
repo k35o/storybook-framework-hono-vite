@@ -13,7 +13,7 @@ catalog:
   playwright: 1.62.1
   storybook: 10.5.9
   typescript: 7.0.2
-  vite: 8.2.1
+  vite: 8.2.2
   vite-plus: 0.2.9
   vitest: 4.1.11
 
