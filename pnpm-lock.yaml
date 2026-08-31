@@ -22,8 +22,8 @@ catalogs:
       specifier: 4.1.11
       version: 4.1.11
     hono:
-      specifier: 4.13.3
-      version: 4.13.3
+      specifier: 4.13.4
+      version: 4.13.4
     honox:
       specifier: 0.1.61
       version: 0.1.61
@@ -61,10 +61,10 @@ importers:
     dependencies:
       hono:
         specifier: 'catalog:'
-        version: 4.13.3
+        version: 4.13.4
       honox:
         specifier: 'catalog:'
-        version: 0.1.61(hono@4.13.3)
+        version: 0.1.61(hono@4.13.4)
       storybook-framework-hono-vite:
         specifier: workspace:*
         version: link:../../packages/storybook-framework-hono-vite
@@ -111,7 +111,7 @@ importers:
         version: 25.9.5
       hono:
         specifier: 'catalog:'
-        version: 4.13.3
+        version: 4.13.4
       storybook:
         specifier: 'catalog:'
         version: 10.5.10(react@19.2.8)(vite-plus@0.3.0(@types/node@25.9.5)(@vitest/browser-playwright@4.1.11)(esbuild@0.28.2)(typescript@7.0.2)(vite@8.2.2(@types/node@25.9.5)(esbuild@0.28.2)))
@@ -1813,8 +1813,8 @@ packages:
     engines: {node: '>=0.6.0'}
     hasBin: true
 
-  hono@4.13.3:
-    resolution: {integrity: sha512-r8AO2mYHoLxSHkgafNeC/BXyb2vWRxD3jem4Ts+ptav8oTG5FIRifAjuJEmZI4bSvvc2ns0GxmIYiZnHqN3mMw==}
+  hono@4.13.4:
+    resolution: {integrity: sha512-AGEwKIyRMHRv1t8Wjwa3LHxQ61X5CqrdFT+4BRNTpqS5aJNnpl5WLjADb7vFlJzI/8uK7T5QLVApCMQKNa3LgQ==}
     engines: {node: '>=16.9.0'}
 
   honox@0.1.61:
@@ -2518,14 +2518,14 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@hono/node-server@1.19.17(hono@4.13.3)':
+  '@hono/node-server@1.19.17(hono@4.13.4)':
     dependencies:
-      hono: 4.13.3
+      hono: 4.13.4
 
-  '@hono/vite-dev-server@0.25.3(hono@4.13.3)':
+  '@hono/vite-dev-server@0.25.3(hono@4.13.4)':
     dependencies:
-      '@hono/node-server': 1.19.17(hono@4.13.3)
-      hono: 4.13.3
+      '@hono/node-server': 1.19.17(hono@4.13.4)
+      hono: 4.13.4
       minimatch: 9.0.9
 
   '@jridgewell/gen-mapping@0.3.13':
@@ -3531,16 +3531,16 @@ snapshots:
     dependencies:
       minimist: 1.2.8
 
-  hono@4.13.3: {}
+  hono@4.13.4: {}
 
-  honox@0.1.61(hono@4.13.3):
+  honox@0.1.61(hono@4.13.4):
     dependencies:
       '@babel/generator': 7.29.1
       '@babel/parser': 7.29.3
       '@babel/traverse': 7.29.0
       '@babel/types': 7.29.0
-      '@hono/vite-dev-server': 0.25.3(hono@4.13.3)
-      hono: 4.13.3
+      '@hono/vite-dev-server': 0.25.3(hono@4.13.4)
+      hono: 4.13.4
       jsonc-parser: 3.3.1
       precinct: 12.2.0
     optionalDependencies:
