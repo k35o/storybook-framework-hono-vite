@@ -14,7 +14,7 @@
     "storybook-framework-hono-vite": "workspace:*",
     "vite-plus": "catalog:"
   },
-  "packageManager": "pnpm@12.3.1",
+  "packageManager": "pnpm@12.3.2",
   "engines": {
     "node": ">=24.14.1"
   }
