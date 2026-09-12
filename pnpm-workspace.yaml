@@ -10,7 +10,7 @@ catalog:
   '@vitest/browser-playwright': 4.1.11
   hono: 4.13.7
   honox: 0.1.61
-  playwright: 1.62.1
+  playwright: 1.63.0
   storybook: 10.6.0
   typescript: 7.0.2
   vite: 8.2.2
