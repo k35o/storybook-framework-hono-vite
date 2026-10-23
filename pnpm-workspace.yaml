@@ -14,7 +14,7 @@ catalog:
   storybook: 10.6.2
   typescript: 7.0.2
   vite: 8.3.4
-  vite-plus: 0.3.3
+  vite-plus: 1.1.0
   vitest: 4.1.12
 
 blockExoticSubdeps: true
@@ -29,6 +29,8 @@ verifyDepsBeforeRun: install
 minimumReleaseAgeExclude:
   # Renovate security update: hono@4.12.25 || 4.12.34
   - hono@4.12.25 || 4.12.34
+  # Renovate security update: vite-plus@1.1.0
+  - vite-plus@1.1.0
 
 versioning:
   changelog:
