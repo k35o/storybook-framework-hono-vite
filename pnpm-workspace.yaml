@@ -6,7 +6,7 @@ catalog:
   '@storybook/addon-a11y': 10.6.6
   '@storybook/addon-vitest': 10.6.6
   '@storybook/builder-vite': 10.6.6
-  '@types/node': 25.9.9
+  '@types/node': 26.6.6
   '@vitest/browser-playwright': 5.1.0
   hono: 4.13.16
   honox: 0.1.62
