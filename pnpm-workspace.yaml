@@ -8,7 +8,7 @@ catalog:
   '@storybook/builder-vite': 10.6.6
   '@types/node': 25.9.9
   '@vitest/browser-playwright': 5.1.0
-  hono: 4.13.16
+  hono: 4.13.17
   honox: 0.1.62
   playwright: 1.65.0
   storybook: 10.6.6
