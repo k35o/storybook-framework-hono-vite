@@ -33,16 +33,13 @@ export default defineConfig({
               browser: {
                 enabled: true,
                 headless: true,
-                provider: playwright(),
-                screenshotFailures: false,
-                instances: [
-                  {
-                    browser: 'chromium',
-                    context: {
-                      reducedMotion: 'reduce',
-                    },
+                provider: playwright({
+                  contextOptions: {
+                    reducedMotion: 'reduce',
                   },
-                ],
+                }),
+                screenshotFailures: false,
+                instances: [{ browser: 'chromium' }],
               },
             },
           },
