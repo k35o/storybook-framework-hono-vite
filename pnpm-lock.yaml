@@ -189,8 +189,8 @@ catalogs:
       specifier: 5.1.0
       version: 5.1.0
     hono:
-      specifier: 4.13.18
-      version: 4.13.18
+      specifier: 4.13.19
+      version: 4.13.19
     honox:
       specifier: 0.1.62
       version: 0.1.62
@@ -231,10 +231,10 @@ importers:
     dependencies:
       hono:
         specifier: 'catalog:'
-        version: 4.13.18
+        version: 4.13.19
       honox:
         specifier: 'catalog:'
-        version: 0.1.62(hono@4.13.18)
+        version: 0.1.62(hono@4.13.19)
       storybook-framework-hono-vite:
         specifier: workspace:*
         version: link:../../packages/storybook-framework-hono-vite
@@ -281,7 +281,7 @@ importers:
         version: 25.9.9
       hono:
         specifier: 'catalog:'
-        version: 4.13.18
+        version: 4.13.19
       storybook:
         specifier: 'catalog:'
         version: 10.6.7(react@19.3.1)(vite-plus@1.6.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.0)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2))
@@ -1805,8 +1805,8 @@ packages:
     engines: {node: '>=0.6.0'}
     hasBin: true
 
-  hono@4.13.18:
-    resolution: {integrity: sha512-H9q/E1XizaWstJxUW881dmLxEj+t/TrGGnyxINkm4+sK0qUwsMtFdo2BWI9Vs3cIS19MU6b6iCijoUoEf4f3DA==}
+  hono@4.13.19:
+    resolution: {integrity: sha512-KmXvQAXwcAHV+muzbIwoJ23niEB5nMoDVr9WcRkU8mvjUECm/1+7v4Jgp7P7a+H6MLFrh+vXrGonGrGS+RQfkA==}
     engines: {node: '>=16.9.0'}
 
   honox@0.1.62:
@@ -2277,10 +2277,12 @@ packages:
   yuku-core@0.19.0:
     resolution: {integrity: sha512-kYK9e1XdfirNhkipzW0wmMcSWcVF/CWnuugodfVYRCUwvoBefweL9HzB96OiKEhsx78V5WbUxbJqlizMX869Qg==}
     engines: {node: '>=14.18.0'}
+    deprecated: 'Yuku is now one package with one core. Use "yuku" instead: https://yuku.fyi/javascript/. Existing installs keep working but get no more fixes.'
 
   yuku-parser@0.19.0:
     resolution: {integrity: sha512-XrBh9ZiQK5mJVRxZBAvD6LwRyAYrK3MFtH3+onyuxFL5hFD44EC3QOmIC1FjTj6H2MMwq46/NAI+NZxLZPZgxg==}
     engines: {node: '>=14.18.0'}
+    deprecated: 'Yuku is now one package with one core. Use "yuku" instead: https://yuku.fyi/javascript/. Existing installs keep working but get no more fixes.'
 
 snapshots:
 
@@ -2461,14 +2463,14 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@hono/node-server@1.19.19(hono@4.13.18)':
+  '@hono/node-server@1.19.19(hono@4.13.19)':
     dependencies:
-      hono: 4.13.18
+      hono: 4.13.19
 
-  '@hono/vite-dev-server@0.25.3(hono@4.13.18)':
+  '@hono/vite-dev-server@0.25.3(hono@4.13.19)':
     dependencies:
-      '@hono/node-server': 1.19.19(hono@4.13.18)
-      hono: 4.13.18
+      '@hono/node-server': 1.19.19(hono@4.13.19)
+      hono: 4.13.19
       minimatch: 9.0.9
 
   '@jridgewell/gen-mapping@0.3.13':
@@ -3370,16 +3372,16 @@ snapshots:
     dependencies:
       minimist: 1.2.8
 
-  hono@4.13.18: {}
+  hono@4.13.19: {}
 
-  honox@0.1.62(hono@4.13.18):
+  honox@0.1.62(hono@4.13.19):
     dependencies:
       '@babel/generator': 7.29.1
       '@babel/parser': 7.29.3
       '@babel/traverse': 7.29.0
       '@babel/types': 7.29.0
-      '@hono/vite-dev-server': 0.25.3(hono@4.13.18)
-      hono: 4.13.18
+      '@hono/vite-dev-server': 0.25.3(hono@4.13.19)
+      hono: 4.13.19
       jsonc-parser: 3.3.1
       precinct: 12.2.0
     optionalDependencies:
