@@ -7,7 +7,7 @@ catalog:
   '@storybook/addon-vitest': 10.6.7
   '@storybook/builder-vite': 10.6.7
   '@types/node': 25.9.9
-  '@vitest/browser-playwright': 5.1.0
+  '@vitest/browser-playwright': 5.1.1
   hono: 4.13.19
   honox: 0.1.62
   playwright: 1.65.1
@@ -15,7 +15,7 @@ catalog:
   typescript: 7.0.2
   vite: npm:@voidzero-dev/vite-plus-core@8.3.8000
   vite-plus: 1.7.0
-  vitest: 5.1.0
+  vitest: 5.1.1
 
 overrides:
   vite@*: 'catalog:'
