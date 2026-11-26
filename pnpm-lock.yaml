@@ -192,8 +192,8 @@ catalogs:
       specifier: 4.13.19
       version: 4.13.19
     honox:
-      specifier: 0.1.62
-      version: 0.1.62
+      specifier: 0.1.63
+      version: 0.1.63
     playwright:
       specifier: 1.65.1
       version: 1.65.1
@@ -234,7 +234,7 @@ importers:
         version: 4.13.19
       honox:
         specifier: 'catalog:'
-        version: 0.1.62(hono@4.13.19)
+        version: 0.1.63(hono@4.13.19)
       storybook-framework-hono-vite:
         specifier: workspace:*
         version: link:../../packages/storybook-framework-hono-vite
@@ -1867,8 +1867,8 @@ packages:
     resolution: {integrity: sha512-KmXvQAXwcAHV+muzbIwoJ23niEB5nMoDVr9WcRkU8mvjUECm/1+7v4Jgp7P7a+H6MLFrh+vXrGonGrGS+RQfkA==}
     engines: {node: '>=16.9.0'}
 
-  honox@0.1.62:
-    resolution: {integrity: sha512-fPvoP9MhjMA38gM+NhfOZTFOcxMeI764l+k5o79gETOcpobzkSLrPZnx2JlVLAbaj0LuUrMjcN5Lh3acAEgCUg==}
+  honox@0.1.63:
+    resolution: {integrity: sha512-lWxCkD5f6/FvrNkRPvNXU0uYxGrnnYGMd8jo3TWkbexmOh7ugKTxt94r4A3mDZEQpqm+AIQxOLBbRS5NBPzFLg==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '>=4.* || ^5.0.0-0'
@@ -3594,7 +3594,7 @@ snapshots:
 
   hono@4.13.19: {}
 
-  honox@0.1.62(hono@4.13.19):
+  honox@0.1.63(hono@4.13.19):
     dependencies:
       '@babel/generator': 7.29.1
       '@babel/parser': 7.29.3
