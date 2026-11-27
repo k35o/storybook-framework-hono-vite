@@ -174,14 +174,14 @@ settings:
 catalogs:
   default:
     '@storybook/addon-a11y':
-      specifier: 10.6.7
-      version: 10.6.7
+      specifier: 10.6.8
+      version: 10.6.8
     '@storybook/addon-vitest':
-      specifier: 10.6.7
-      version: 10.6.7
+      specifier: 10.6.8
+      version: 10.6.8
     '@storybook/builder-vite':
-      specifier: 10.6.7
-      version: 10.6.7
+      specifier: 10.6.8
+      version: 10.6.8
     '@types/node':
       specifier: 25.9.9
       version: 25.9.9
@@ -198,8 +198,8 @@ catalogs:
       specifier: 1.65.1
       version: 1.65.1
     storybook:
-      specifier: 10.6.7
-      version: 10.6.7
+      specifier: 10.6.8
+      version: 10.6.8
     typescript:
       specifier: 7.0.2
       version: 7.0.2
@@ -241,10 +241,10 @@ importers:
     devDependencies:
       '@storybook/addon-a11y':
         specifier: 'catalog:'
-        version: 10.6.7(storybook@10.6.7(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)))
+        version: 10.6.8(storybook@10.6.8(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)))
       '@storybook/addon-vitest':
         specifier: 'catalog:'
-        version: 10.6.7(@vitest/browser-playwright@5.1.1)(@vitest/browser@5.1.1(@vitest/browser-playwright@5.1.1)(@voidzero-dev/vite-plus-core@8.3.8000(@types/node@25.9.9)(esbuild@0.28.2)(typescript@7.0.2))(vitest@5.1.1))(react@19.3.1)(storybook@10.6.7(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)))(vitest@5.1.1)
+        version: 10.6.8(@vitest/browser-playwright@5.1.1)(@vitest/browser@5.1.1(@vitest/browser-playwright@5.1.1)(@voidzero-dev/vite-plus-core@8.3.8000(@types/node@25.9.9)(esbuild@0.28.2)(typescript@7.0.2))(vitest@5.1.1))(react@19.3.1)(storybook@10.6.8(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)))(vitest@5.1.1)
       '@types/node':
         specifier: 'catalog:'
         version: 25.9.9
@@ -256,7 +256,7 @@ importers:
         version: 1.65.1
       storybook:
         specifier: 'catalog:'
-        version: 10.6.7(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0))
+        version: 10.6.8(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0))
       typescript:
         specifier: 'catalog:'
         version: 7.0.2
@@ -274,7 +274,7 @@ importers:
     dependencies:
       '@storybook/builder-vite':
         specifier: 'catalog:'
-        version: 10.6.7(@voidzero-dev/vite-plus-core@8.3.8000(@types/node@25.9.9)(esbuild@0.28.2)(typescript@7.0.2))(storybook@10.6.7(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.0)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)))
+        version: 10.6.8(@voidzero-dev/vite-plus-core@8.3.8000(@types/node@25.9.9)(esbuild@0.28.2)(typescript@7.0.2))(storybook@10.6.8(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.0)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)))
     devDependencies:
       '@types/node':
         specifier: 'catalog:'
@@ -284,7 +284,7 @@ importers:
         version: 4.13.19
       storybook:
         specifier: 'catalog:'
-        version: 10.6.7(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.0)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0))
+        version: 10.6.8(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.0)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0))
       typescript:
         specifier: 'catalog:'
         version: 7.0.2
@@ -1070,17 +1070,17 @@ packages:
     os: [linux]
     libc: [glibc]
 
-  '@storybook/addon-a11y@10.6.7':
-    resolution: {integrity: sha512-ARd+bjfOYoICe00+svRgFsCVqV7RbN+wgi8yfRhk31kESR7NnTMBGiZD8vWv/r3xqul/Ddr1uR6mUK4lpH7sqw==}
+  '@storybook/addon-a11y@10.6.8':
+    resolution: {integrity: sha512-+tzs6nyvy4A4/tCFcXZoYrt7d5K8nQN8p7H1nP1GFicTHY4mlQpebP2PZUBcitupXUpyvHfYvw8fJUhrQKJC4Q==}
     peerDependencies:
-      storybook: ^10.6.7
+      storybook: ^10.6.8
 
-  '@storybook/addon-vitest@10.6.7':
-    resolution: {integrity: sha512-8Pc71Al635pMfYK9mBfzBd87ta1yD7tgyn0IGPtK6HGdRM0IBrMzVW716Z0i4dfedMPma5z77sIzlr+7z4gBMA==}
+  '@storybook/addon-vitest@10.6.8':
+    resolution: {integrity: sha512-rokOBjvK8cmxHf4plhXgRtSfJsizG+jUAkvv8VwCaG9xTu2hCtbOT415McZlpAMhiMXSlRg9A8ESYatU0ZartQ==}
     peerDependencies:
       '@vitest/browser': ^4.0.0 || ^5.0.0
       '@vitest/browser-playwright': ^4.0.0 || ^5.0.0
-      storybook: ^10.6.7
+      storybook: ^10.6.8
       vitest: ^4.0.0 || ^5.0.0
     peerDependenciesMeta:
       '@vitest/browser':
@@ -1090,10 +1090,10 @@ packages:
       vitest:
         optional: true
 
-  '@storybook/builder-vite@10.6.7':
-    resolution: {integrity: sha512-6DI3XP4He/nMMK4vGLl9tkneygr5bJvYx5EwNZMzw15tCosvGuWRREBvWqTHjZdoRa8HJpqosoFm60splBoAew==}
+  '@storybook/builder-vite@10.6.8':
+    resolution: {integrity: sha512-prL9t88RSzN3uk8Kzx5LnkqIODhRbwKa0PMryTlIEcew1J1hAiXcCNCJTDM5uhKjTO8s4OSBsCozVozdd+C2TQ==}
     peerDependencies:
-      storybook: ^10.6.7
+      storybook: ^10.6.8
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
 
   '@storybook/global@5.0.0':
@@ -2165,8 +2165,8 @@ packages:
   std-env@4.3.0:
     resolution: {integrity: sha512-OtU/EgQ1kIm5KwqQpBC6ZEMXrZRui11w8zgfTWp8cdO9B8OaPsbA8bTHO2P+HNo1VlUTGMVBwPhydu6poeXiag==}
 
-  storybook@10.6.7:
-    resolution: {integrity: sha512-/1h87XqC+8tZ5PQ/GVWOg78tCQuEAshYWwok5niBcnHEKzZy6Ls06uuT5/rhQ3iUB0y8iexEVHmUe3jaaxNguw==}
+  storybook@10.6.8:
+    resolution: {integrity: sha512-evtpCo87LwamL5oMQJmtD0kaQNOBePOAbhW9WlM2zW5nItbtDHeXVBLJR4d3Wld9++XhPntaGJKE3RUw6c0VVg==}
     hasBin: true
     peerDependencies:
       '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
@@ -2853,17 +2853,17 @@ snapshots:
   '@rollup/rollup-linux-x64-gnu@4.68.2':
     optional: true
 
-  '@storybook/addon-a11y@10.6.7(storybook@10.6.7(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)))':
+  '@storybook/addon-a11y@10.6.8(storybook@10.6.8(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)))':
     dependencies:
       '@storybook/global': 5.0.0
       axe-core: 4.14.0
-      storybook: 10.6.7(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0))
+      storybook: 10.6.8(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0))
 
-  '@storybook/addon-vitest@10.6.7(@vitest/browser-playwright@5.1.1)(@vitest/browser@5.1.1(@vitest/browser-playwright@5.1.1)(@voidzero-dev/vite-plus-core@8.3.8000(@types/node@25.9.9)(esbuild@0.28.2)(typescript@7.0.2))(vitest@5.1.1))(react@19.3.1)(storybook@10.6.7(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)))(vitest@5.1.1)':
+  '@storybook/addon-vitest@10.6.8(@vitest/browser-playwright@5.1.1)(@vitest/browser@5.1.1(@vitest/browser-playwright@5.1.1)(@voidzero-dev/vite-plus-core@8.3.8000(@types/node@25.9.9)(esbuild@0.28.2)(typescript@7.0.2))(vitest@5.1.1))(react@19.3.1)(storybook@10.6.8(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)))(vitest@5.1.1)':
     dependencies:
       '@storybook/global': 5.0.0
       '@storybook/icons': 2.2.0(react@19.3.1)
-      storybook: 10.6.7(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0))
+      storybook: 10.6.8(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0))
     optionalDependencies:
       '@vitest/browser': 5.1.1(@vitest/browser-playwright@5.1.1)(@voidzero-dev/vite-plus-core@8.3.8000(@types/node@25.9.9)(esbuild@0.28.2)(typescript@7.0.2))(vitest@5.1.1)
       '@vitest/browser-playwright': 5.1.1(@voidzero-dev/vite-plus-core@8.3.8000(@types/node@25.9.9)(esbuild@0.28.2)(typescript@7.0.2))(playwright@1.65.1)(vitest@5.1.1)
@@ -2871,9 +2871,9 @@ snapshots:
     transitivePeerDependencies:
       - react
 
-  '@storybook/builder-vite@10.6.7(@voidzero-dev/vite-plus-core@8.3.8000(@types/node@25.9.9)(esbuild@0.28.2)(typescript@7.0.2))(storybook@10.6.7(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.0)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)))':
+  '@storybook/builder-vite@10.6.8(@voidzero-dev/vite-plus-core@8.3.8000(@types/node@25.9.9)(esbuild@0.28.2)(typescript@7.0.2))(storybook@10.6.8(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.0)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)))':
     dependencies:
-      storybook: 10.6.7(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.0)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0))
+      storybook: 10.6.8(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.0)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0))
       ts-dedent: 2.3.0
       vite: '@voidzero-dev/vite-plus-core@8.3.8000(@types/node@25.9.9)(esbuild@0.28.2)(typescript@7.0.2)'
 
@@ -3963,7 +3963,7 @@ snapshots:
 
   std-env@4.3.0: {}
 
-  storybook@10.6.7(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.0)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)):
+  storybook@10.6.8(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.0)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)):
     dependencies:
       '@storybook/global': 5.0.0
       '@storybook/icons': 2.2.0(react@19.3.1)
@@ -3989,7 +3989,7 @@ snapshots:
       - react
       - utf-8-validate
 
-  storybook@10.6.7(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)):
+  storybook@10.6.8(react@19.3.1)(vite-plus@1.7.0(@types/node@25.9.9)(@vitest/browser-playwright@5.1.1)(@vitest/ui@5.1.0)(esbuild@0.28.2)(playwright@1.65.1)(typescript@7.0.2)(vitest@5.1.0)):
     dependencies:
       '@storybook/global': 5.0.0
       '@storybook/icons': 2.2.0(react@19.3.1)
